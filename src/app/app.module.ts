@@ -48,13 +48,15 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { SearchStudentComponent } from './search-student/search-student.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    SideNavComponent
+    SideNavComponent,
+    SearchStudentComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
