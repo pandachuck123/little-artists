@@ -1,85 +1,122 @@
-<div class="nav-side-menu">
-  <div class="brand">
-    <img src="assets/images/logo.jpg" alt="artist-logo" title="Artist-Logo" style="height: 50px;width: 130px;">
-  </div>
-  <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+<!--<div class="nav-side-menu">-->
+  <!--<div class="brand">-->
+    <!--<img src="assets/images/logo.jpg" alt="artist-logo" title="Artist-Logo" style="height: 50px;width: 130px;">-->
+  <!--</div>-->
+  <!--<i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>-->
+  <!--<div class="menu-list">-->
+    <!--<ul id="menu-content" class="menu-content collapse out">-->
+      <!--<li>-->
+        <!--<a [routerLink]="['/home']">-->
+          <!--<i class="fas fa-home"></i> home-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li  data-toggle="collapse" data-target="#products" class="collapsed active">-->
+        <!--<a ><i class="fas fa-address-book"></i> Report <span class="arrow"></span></a>-->
+      <!--</li>-->
+      <!--<ul class="sub-menu collapse" id="products">-->
+        <!--<li><a [routerLink]="['/student-report']">Student Report</a></li>-->
+        <!--<li><a [routerLink]="['/teacher-report']">Teacher Report</a></li>-->
+      <!--</ul>-->
+      <!--<li>-->
+        <!--<a [routerLink]="['/student-master']">-->
+          <!--<i class="fas fa-user-graduate"></i> Student Master-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li>-->
+        <!--<a [routerLink]="['/login']" (click)="out()">-->
+          <!--<i class="fas fa-power-off"></i> Log Out-->
+        <!--</a>-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</div>-->
+<!--</div>-->
 
-  <div class="menu-list">
 
-    <ul id="menu-content" class="menu-content collapse out">
+<!-- ======= Header ======= -->
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/Home"><span>Little</span>Artist</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
 
-      <li>
-        <a [routerLink]="['/home']">
-          <i class="fas fa-home"></i> home
-        </a>
-      </li>
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active text-center">
+          <a class="nav-link" routerLink="/Request-Tutor">Home</a>
+        </li>
+        <!--<li class="nav-item text-center">-->
+          <!--<a class="nav-link" routerLink="/Request-Tutor">Report</a>-->
+        <!--</li>-->
+        <li class="nav-item text-center submenu dropdown" >
+          <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Report</a>
+          <ul class="dropdown-menu ">
+            <li class="nav-item text-center">
+              <a class="nav-link" routerLink="/Request-Tutor">MultiStudent Report</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link" routerLink="/Fees-Calculator">Teacher Report</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item text-center">
+          <a class="nav-link" routerLink="/Request-Tutor">Search Student</a>
+        </li>
+        <li class="nav-item text-center submenu dropdown" >
+          <!--<a class="nav-link" routerLink="/Request-Tutor">Student List</a>-->
+          <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Student List</a>
+          <ul class="dropdown-menu ">
+            <li class="nav-item text-center">
+              <a class="nav-link" routerLink="/Request-Tutor">Student Master</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link" routerLink="/Fees-Calculator">Upload Student</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link" routerLink="/Fees-Calculator">Today Slot</a>
+            </li>
+          </ul>
+        </li>
 
-      <li  data-toggle="collapse" data-target="#products" class="collapsed active">
-        <a ><i class="fas fa-address-book"></i> Report <span class="arrow"></span></a>
-      </li>
-      <ul class="sub-menu collapse" id="products">
-        <!--<li class="active"><a >CSS3 Animation</a></li>-->
-        <li><a [routerLink]="['/student-report']">Student Report</a></li>
-        <li><a [routerLink]="['/teacher-report']">Teacher Report</a></li>
-        <!--<li><a href="#">Tabs & Accordions</a></li>-->
-        <!--<li><a href="#">Typography</a></li>-->
-        <!--<li><a href="#">FontAwesome</a></li>-->
-        <!--<li><a href="#">Slider</a></li>-->
-        <!--<li><a href="#">Panels</a></li>-->
-        <!--<li><a href="#">Widgets</a></li>-->
-        <!--<li><a href="#">Bootstrap Model</a></li>-->
+        <li class="nav-item text-center submenu dropdown" >
+          <!--<a class="nav-link" routerLink="/Request-Tutor">Student List</a>-->
+          <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+          <ul class="dropdown-menu ">
+            <li class="nav-item text-center">
+              <a class="nav-link" routerLink="/Request-Tutor">Generate Certificate</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link" routerLink="/Fees-Calculator">Message</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link" routerLink="/Fees-Calculator">Gallery</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link" routerLink="/Fees-Calculator">Query Tracker</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item text-center submenu dropdown" >
+          <!--<a class="nav-link" routerLink="/Request-Tutor">Student List</a>-->
+          <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile</a>
+          <ul class="dropdown-menu ">
+            <li class="nav-item text-center">
+              <a class="nav-link" routerLink="/Request-Tutor">Logout</a>
+            </li>
+            <li class="nav-item text-center">
+              <a class="nav-link" routerLink="/Fees-Calculator">Teacher Password Create</a>
+            </li>
+
+          </ul>
+        </li>
       </ul>
-
-      <li>
-        <a [routerLink]="['/student-master']">
-          <i class="fas fa-user-graduate"></i> Student Master
-        </a>
-      </li>
-
-      <li>
-        <a [routerLink]="['/login']" (click)="out()">
-          <i class="fas fa-power-off"></i> Log Out
-        </a>
-      </li>
-
-
-      <!--<li data-toggle="collapse" data-target="#service" class="collapsed">-->
-      <!--<a href="#"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>-->
-      <!--</li>-->
-      <!--<ul class="sub-menu collapse" id="service">-->
-      <!--<li>New Service 1</li>-->
-      <!--<li>New Service 2</li>-->
-      <!--<li>New Service 3</li>-->
-      <!--</ul>-->
-
-
-      <!--<li data-toggle="collapse" data-target="#new" class="collapsed">-->
-      <!--<a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>-->
-      <!--</li>-->
-      <!--<ul class="sub-menu collapse" id="new">-->
-      <!--<li>New New 1</li>-->
-      <!--<li>New New 2</li>-->
-      <!--<li>New New 3</li>-->
-      <!--</ul>-->
-
-
-      <!--<li>-->
-      <!--<a href="#">-->
-      <!--<i class="fa fa-user fa-lg"></i> Profile-->
-      <!--</a>-->
-      <!--</li>-->
-
-      <!--<li>-->
-      <!--<a href="#">-->
-      <!--<i class="fa fa-users fa-lg"></i> Users-->
-      <!--</a>-->
-      <!--</li>-->
-    </ul>
+    </div>
   </div>
-</div>
-
-<div class="container">
+</nav>
+<!--&lt;!&ndash;&#45;&#45;end-&#45;&#45;&#45;&#45;!>-->
+<section style="max-width: 100%">
+<!--<div class="container">-->
   <router-outlet></router-outlet>
-</div>
+<!--</div>-->
 
-
+</section>
