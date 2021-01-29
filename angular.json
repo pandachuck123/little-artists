@@ -201,5 +201,8 @@
       }
     }
   },
-  "defaultProject": "little-artists"
+  "defaultProject": "little-artists",
+  "cli": {
+    "analytics": "81cc88ca-b201-430c-9b93-5c1d6352600d"
+  }
 }
