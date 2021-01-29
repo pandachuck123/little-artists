@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from "./home/home.component";
 import {LoginComponent} from "./login/login.component";
 import {SideNavComponent} from "./side-nav/side-nav.component";
-import {SearchStudentComponent} from "./search-student/search-student.component";
 import {SearchComponent} from "./search/search.component";
 
 const routes: Routes = [

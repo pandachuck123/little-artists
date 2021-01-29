@@ -1,50 +1,50 @@
-<div class="section">
-  <div class="container">
-  <div class="row">
-  <!--  <mat- >-->
-  <!--    <option *ngFor="let prod of ProductHeader">{{prod.name}} </option>-->
-  <!--  </mat->-->
+<!--<div class="section">-->
+  <!--<div class="container">-->
+  <!--<div class="row">-->
+  <!--&lt;!&ndash;  <mat- >&ndash;&gt;-->
+  <!--&lt;!&ndash;    <option *ngFor="let prod of ProductHeader">{{prod.name}} </option>&ndash;&gt;-->
+  <!--&lt;!&ndash;  </mat->&ndash;&gt;-->
 
-  <p >Search</p>
-  <div class="container-fluid">
-    <mat-form-field>
-      <mat-label>Student Name</mat-label>
-      <mat-select  [(ngModel)]="ProductHeader.name" (ngModelChange)="SearchProduct(ProductHeader.name)">
-        <mat-option *ngFor="let prod of ProductHeader" [value]="prod.name">
-          {{prod.name}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-
-
-
-  <!--  <div *ngIf="ProductHeader.name">-->
-  <!--    <h5>You have selected: {{ProductHeader.name}} Product </h5>-->
-  <!--  </div>-->
-  <div class="table-responsive" *ngIf="ProductHeader.name">
-    <table class="table" >
-      <thead>
-
-      <tr >
-        <th>Name</th> <th>Store</th>  <th>Price</th> <th>Model</th><th>Action</th>
-      </tr>    </thead>
-      <tbody>
-      <tr  *ngFor="let Prod of ProductDetails" class="table-info">
-        <td>{{Prod.title}}</td>
-        <td>{{Prod.store}}</td>
-        <td>{{Prod.price}}</td>
-        <td>{{Prod.model}}</td>
-        <td><button mdbBtn color="indigo" size="sm" mdbWavesEffect type="button" class="m-0">Button</button></td>
-      </tr>
-      </tbody>
-    </table>
+  <!--<p >Search</p>-->
+  <!--<div class="container-fluid">-->
+    <!--<mat-form-field>-->
+      <!--<mat-label>Student Name</mat-label>-->
+      <!--<mat-select  [(ngModel)]="ProductHeader.name" (ngModelChange)="SearchProduct(ProductHeader.name)">-->
+        <!--<mat-option *ngFor="let prod of ProductHeader" [value]="prod.name">-->
+          <!--{{prod.name}}-->
+        <!--</mat-option>-->
+      <!--</mat-select>-->
+    <!--</mat-form-field>-->
+  <!--</div>-->
 
 
 
+  <!--&lt;!&ndash;  <div *ngIf="ProductHeader.name">&ndash;&gt;-->
+  <!--&lt;!&ndash;    <h5>You have selected: {{ProductHeader.name}} Product </h5>&ndash;&gt;-->
+  <!--&lt;!&ndash;  </div>&ndash;&gt;-->
+  <!--<div class="table-responsive" *ngIf="ProductHeader.name">-->
+    <!--<table class="table" >-->
+      <!--<thead>-->
 
-  </div>
-</div>
-</div>
-</div>
+      <!--<tr >-->
+        <!--<th>Name</th> <th>Store</th>  <th>Price</th> <th>Model</th><th>Action</th>-->
+      <!--</tr>    </thead>-->
+      <!--<tbody>-->
+      <!--<tr  *ngFor="let Prod of ProductDetails" class="table-info">-->
+        <!--<td>{{Prod.title}}</td>-->
+        <!--<td>{{Prod.store}}</td>-->
+        <!--<td>{{Prod.price}}</td>-->
+        <!--<td>{{Prod.model}}</td>-->
+        <!--<td><button mdbBtn color="indigo" size="sm" mdbWavesEffect type="button" class="m-0">Button</button></td>-->
+      <!--</tr>-->
+      <!--</tbody>-->
+    <!--</table>-->
+
+
+
+
+  <!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
 
