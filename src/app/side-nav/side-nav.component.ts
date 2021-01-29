@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-side-nav',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent implements OnInit {
+  public closeNav: any;
 
-  constructor() { }
+  constructor(public toastr: ToastrService) { }
 
   ngOnInit(): void {
+
   }
+
+  out(){
+    this.toastr.success('Log Out Successfully');
+  }
+
 
 }

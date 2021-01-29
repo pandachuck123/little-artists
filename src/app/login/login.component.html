@@ -1,79 +1,78 @@
-<div class="section px-4 py-5 mx-auto">
-  <div class="container register">
-    <div class="row">
-      <div class="col-md-3 register-left">
-      </div>
-      <div class="col-md-9 register-right">
-        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" (click)="tab('admin')">Admin</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" (click)="tab('teacher')">Teacher</a>
-          </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <h3 class="register-heading">Login as an Admin</h3>
+<section >
+  <div class="bg-img">
+    <div class="content">
+      <div class="row">
+        <div class="col-md-12 register-right">
+          <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" (click)="tab('admin')">Admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" (click)="tab('teacher')">Teacher</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <h3 class="register-heading">Login as an Admin</h3>
 
-            <form class="row register-form" [formGroup]="adminLogin">
-              <div class="col-md-7 mt-5">
-                <mat-form-field class="w-100 len">
-                  <label>Email ID</label>
-                  <input matInput    formControlName="emailId"  autocomplete="off" [required]="this.tabValue == 'admin'">
-                  <mat-error *ngIf="adminLogin.controls.emailId.errors?.required">Email ID is required</mat-error>
-                  <mat-error *ngIf="adminLogin.controls.emailId.hasError('pattern')">Please Enter Correct Format</mat-error>
-                </mat-form-field>
-              </div>
-              <div class="col-md-7 mt-3">
-                <mat-form-field class="w-100 len">
-                  <label>Password</label>
-                  <input matInput  formControlName="password"  autocomplete="off" [required]="this.tabValue == 'admin'" minlength="6" [type]="hide ? 'password' : 'text'">
-                  <mat-icon style="cursor: pointer" matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
-                  <mat-error *ngIf="adminLogin.controls.emailId.errors?.required">Password is required</mat-error>
-                  <mat-error *ngIf="adminLogin.controls.emailId.hasError('minlength')">Password isn't long enough, minimum of 6 characters</mat-error>
-                </mat-form-field>
-              </div>
+              <form class="row register-form" [formGroup]="adminLogin">
+                <div class="col-md-7 mt-5">
+                  <mat-form-field class="w-100 len">
+                    <label>Email ID</label>
+                    <input matInput    formControlName="emailId"  autocomplete="off" [required]="this.tabValue == 'admin'">
+                    <mat-error *ngIf="adminLogin.controls.emailId.errors?.required">Email ID is required</mat-error>
+                    <mat-error *ngIf="adminLogin.controls.emailId.hasError('pattern')">Please Enter Correct Format</mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-7 mt-3">
+                  <mat-form-field class="w-100 len">
+                    <label>Password</label>
+                    <input matInput  formControlName="password"  autocomplete="off" [required]="this.tabValue == 'admin'" minlength="6" [type]="hide ? 'password' : 'text'">
+                    <mat-icon style="cursor: pointer" matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                    <mat-error *ngIf="adminLogin.controls.emailId.errors?.required">Password is required</mat-error>
+                    <mat-error *ngIf="adminLogin.controls.emailId.hasError('minlength')">Password isn't long enough, minimum of 6 characters</mat-error>
+                  </mat-form-field>
+                </div>
 
-              <div class="col-md-12 text-center mt-5 ml-5">
-                <!--<button mat-button type="submit" class="button" (click)="submit(login.value)" >Submit</button>-->
-                <button mat-raised-button color="primaryBlue"  (click)="submit(adminLogin.value)" >Submit</button>
+                <div class="col-md-12 text-center mt-5 ml-0">
+                  <!--<button mat-button type="submit" class="button" (click)="submit(login.value)" >Submit</button>-->
+                  <button mat-raised-button color="primary"  (click)="submit(adminLogin.value,'Admin')" >Submit</button>
 
-              </div>
-            </form>
-          </div>
-          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <h3 class="register-heading">Login as a Teacher</h3>
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <h3 class="register-heading">Login as a Teacher</h3>
 
-            <form class="row register-form" [formGroup]="teacherLogin">
-              <div class="col-md-7 mt-5">
-                <mat-form-field class="w-100 len">
-                  <label>Email ID</label>
-                  <input matInput    formControlName="emailId"  autocomplete="off" [required]="this.tabValue == 'teacher'">
-                  <mat-error *ngIf="teacherLogin.controls.emailId.errors?.required">Email ID is required</mat-error>
-                  <mat-error *ngIf="teacherLogin.controls.emailId.hasError('pattern')">Please Enter Correct Format</mat-error>
-                </mat-form-field>
-              </div>
-              <div class="col-md-7 mt-3">
-                <mat-form-field class="w-100 len">
-                  <label>Password</label>
-                  <input matInput  formControlName="password"  autocomplete="off" [required]="this.tabValue == 'teacher'" minlength="6" [type]="hide ? 'password' : 'text'">
-                  <mat-icon style="cursor: pointer" matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
-                  <mat-error *ngIf="teacherLogin.controls.emailId.errors?.required">Password is required</mat-error>
-                  <mat-error *ngIf="teacherLogin.controls.emailId.hasError('minlength')">Password isn't long enough, minimum of 6 characters</mat-error>
-                </mat-form-field>
-              </div>
+              <form class="row register-form" [formGroup]="teacherLogin">
+                <div class="col-md-7 mt-5">
+                  <mat-form-field class="w-100 len">
+                    <label>Email ID</label>
+                    <input matInput    formControlName="emailId"  autocomplete="off" [required]="this.tabValue == 'teacher'">
+                    <mat-error *ngIf="teacherLogin.controls.emailId.errors?.required">Email ID is required</mat-error>
+                    <mat-error *ngIf="teacherLogin.controls.emailId.hasError('pattern')">Please Enter Correct Format</mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-7 mt-3">
+                  <mat-form-field class="w-100 len">
+                    <label>Password</label>
+                    <input matInput  formControlName="password"  autocomplete="off" [required]="this.tabValue == 'teacher'" minlength="6" [type]="hide ? 'password' : 'text'">
+                    <mat-icon style="cursor: pointer" matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                    <mat-error *ngIf="teacherLogin.controls.emailId.errors?.required">Password is required</mat-error>
+                    <mat-error *ngIf="teacherLogin.controls.emailId.hasError('minlength')">Password isn't long enough, minimum of 6 characters</mat-error>
+                  </mat-form-field>
+                </div>
 
-              <div class="col-md-12 text-center mt-5 ml-5">
-                <button mat-raised-button color="primaryBlue"  (click)="submit(teacherLogin.value)" >Submit</button>
+                <div class="col-md-12 text-center mt-5 ml-0">
+                  <button mat-raised-button color="primary"  (click)="submit(teacherLogin.value,'Teacher')" >Submit</button>
 
-              </div>
-            </form>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
-
   </div>
-</div>
-
+</section>
