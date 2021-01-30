@@ -22,8 +22,8 @@
             <div class="col-md-4">
               <mat-form-field class="w-100">
                 <input matInput placeholder="Phone No" formControlName="mobile" minlength="10"  maxlength="10" (keypress)="numberValidate($event)" autocomplete="off" required>
-                <mat-error *ngIf="form.controls.mobile.errors?.required">Mobile No is required</mat-error>
-                <mat-error *ngIf="form.controls.mobile.hasError('pattern')">Enter Valid  Mobile Number</mat-error>
+                <mat-error *ngIf="form.controls.mobile.errors?.required">Phone No is required</mat-error>
+                <mat-error *ngIf="form.controls.mobile.hasError('pattern')">Enter Valid  Phone No</mat-error>
               </mat-form-field>
             </div>
             <div class="col-md-4 mt-4">
