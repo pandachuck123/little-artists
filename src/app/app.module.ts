@@ -49,6 +49,16 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { SearchComponent } from './search/search.component';
+import { MultiStudentReportComponent } from './multi-student-report/multi-student-report.component';
+import { TeacherReportComponent } from './teacher-report/teacher-report.component';
+import { StudentMasterComponent } from './student-master/student-master.component';
+import { UploadStudentComponent } from './upload-student/upload-student.component';
+import { TodaySlotComponent } from './today-slot/today-slot.component';
+import { GenerateCertificateComponent } from './generate-certificate/generate-certificate.component';
+import { MessageComponent } from './message/message.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { QueryTrackerComponent } from './query-tracker/query-tracker.component';
+import { PasswordCreationComponent } from './password-creation/password-creation.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +67,16 @@ import { SearchComponent } from './search/search.component';
     LoginComponent,
     SideNavComponent,
     SearchComponent,
+    MultiStudentReportComponent,
+    TeacherReportComponent,
+    StudentMasterComponent,
+    UploadStudentComponent,
+    TodaySlotComponent,
+    GenerateCertificateComponent,
+    MessageComponent,
+    GalleryComponent,
+    QueryTrackerComponent,
+    PasswordCreationComponent,
 
     // SearchStudentComponent,
   ],
