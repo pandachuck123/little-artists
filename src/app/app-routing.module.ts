@@ -14,7 +14,8 @@ import {PasswordCreationComponent} from "./password-creation/password-creation.c
 import {StudentMasterComponent} from "./student-master/student-master.component";
 import {TeacherReportComponent} from "./teacher-report/teacher-report.component";
 import {TodaySlotComponent} from "./today-slot/today-slot.component";
-import {AddUserComponent} from "./add-user/add-user.component";
+import {ProjectSetupComponent} from "./project-setup/project-setup.component";
+import {EditUserComponent} from "./edit-user/edit-user.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'Login', pathMatch: 'full' },
@@ -24,7 +25,8 @@ const routes: Routes = [
       {path: 'Home', component: HomeComponent, data: {breadcrumb: 'home'}},
       {path: 'Gallery', component: GalleryComponent, data: {breadcrumb: 'gallery'}},
       {path: 'Generate-Certificate', component: GenerateCertificateComponent, data: {breadcrumb: 'generate-certificate'}},
-      {path: 'Searches', component: AddUserComponent, data: {breadcrumb: 'searches'}},
+      {path: 'Searches', component: ProjectSetupComponent, data: {breadcrumb: 'searches'}},
+      { path: 'edit-user/:postId/edit', component: EditUserComponent, data: { breadcrumb: 'edit' } },
       {path: 'Message', component: MessageComponent, data: {breadcrumb: 'Message'}},
       {path: 'Multi-Student-Report', component: MultiStudentReportComponent, data: {breadcrumb: 'multi-student-report'}},
       {path: 'Password-Creation', component: PasswordCreationComponent, data: {breadcrumb: 'password-creation'}},
