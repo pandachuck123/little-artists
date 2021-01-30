@@ -48,7 +48,6 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
-import { SearchComponent } from './search/search.component';
 import { MultiStudentReportComponent } from './multi-student-report/multi-student-report.component';
 import { TeacherReportComponent } from './teacher-report/teacher-report.component';
 import { StudentMasterComponent } from './student-master/student-master.component';
@@ -59,6 +58,12 @@ import { MessageComponent } from './message/message.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { QueryTrackerComponent } from './query-tracker/query-tracker.component';
 import { PasswordCreationComponent } from './password-creation/password-creation.component';
+import {ProjectSetupComponent} from "./project-setup/project-setup.component";
+import {AddUserComponent} from "./add-user/add-user.component";
+import {EditUserComponent} from "./edit-user/edit-user.component";
+import {NgxPaginationModule} from "ngx-pagination";
+import {HttpClientModule} from "@angular/common/http";
+import {Ng2SearchPipeModule} from "ng2-search-filter";
 
 @NgModule({
   declarations: [
@@ -66,7 +71,6 @@ import { PasswordCreationComponent } from './password-creation/password-creation
     HomeComponent,
     LoginComponent,
     SideNavComponent,
-    SearchComponent,
     MultiStudentReportComponent,
     TeacherReportComponent,
     StudentMasterComponent,
@@ -77,6 +81,10 @@ import { PasswordCreationComponent } from './password-creation/password-creation
     GalleryComponent,
     QueryTrackerComponent,
     PasswordCreationComponent,
+    ProjectSetupComponent,
+    AddUserComponent,
+    EditUserComponent,
+
 
     // SearchStudentComponent,
   ],
@@ -90,7 +98,7 @@ import { PasswordCreationComponent } from './password-creation/password-creation
     FlexLayoutModule.withConfig({ssrObserveBreakpoints: ['xs', 'lt-md']}),
     NgtUniversalModule,
     ToastrModule.forRoot(),
-
+    NgxPaginationModule,
     MatSliderModule,
     MatProgressSpinnerModule,
     MatAutocompleteModule,
@@ -125,6 +133,9 @@ import { PasswordCreationComponent } from './password-creation/password-creation
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
+    HttpClientModule,
+    Ng2SearchPipeModule,
+
   ],
   providers: [
     ToastrService

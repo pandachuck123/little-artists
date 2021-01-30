@@ -1,0 +1,44 @@
+
+
+
+<div class="container" style="margin-top: 30px;">
+  <h1>Record</h1>
+  <!--  <div style="margin-bottom: 10px">  <a href="#" routerLink="../add/" class="btn btn-success"> Project</a>-->
+  <!--  </div>-->
+<!--  <button mat-raised-button color="primary" routerLink="../add/">+ Add Project</button>-->
+  <div class="search-hero">
+    <input class="form-control" type="text" style="width: 25%; height: 24px; float:right;margin-bottom: 21px;" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Searching">
+  </div>
+  <table class="table table-bordered " style="box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);">
+    <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>Teacher</th>
+      <th>Student</th>
+      <th >Action</th>
+    </tr>
+
+    </thead>
+    <tbody >
+    <tr *ngFor="let post of posts|filter:searchText| paginate: { id: 'listing_pagination',
+    itemsPerPage: 10,
+    currentPage: page,
+    totalItems: totalRecords }">
+      <td>{{ post.id }}</td>
+      <td>{{ post.title }}</td>
+      <td>{{ post.body }}</td>
+      <td>
+        <button mat-raised-button color="primary"  [routerLink]="['/edit-user/', post.id, 'edit']" >View</button>
+        <!--        <button mdbBtn type="button" color="info" rounded="true" mdbWavesEffect>Info</button>-->
+
+        <!--        <button type="button" (click)="deletePost(post.id)" class="btn btn-danger">Delete</button>-->
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<pagination-controls  id="listing_pagination" maxSize="5"
+                      directionLinks="true"
+                      (pageChange)="page = $event">
+
+</pagination-controls>

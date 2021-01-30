@@ -1,0 +1,72 @@
+
+@media only screen
+and (min-width: 320px) and (max-width:1024px)  {
+  .bg-img {
+    background: url('/assets/images/stckerpng.png');
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+  }
+  .updatepost{
+
+    //padding-left: 294px;
+    //padding-right: 342px;
+  }
+  .btnn{
+    margin-right: 461px;
+    margin-left: 48px;
+    margin-top: 27px;
+  }
+  .btnn2{
+    margin-left: -425px;
+    margin-top: 27px;
+  }
+  .card{
+    background-color: #ffffffb3;
+    //height: 228px;
+    margin-top: 122px;
+    //background: #ffffffb3;
+  }
+}
+
+
+
+
+
+
+
+
+
+@media only screen
+and (min-width: 1025px) and (max-width: 3000px) {
+  .bg-img {
+    background: url('/assets/images/stckerpng.png');
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+    //opacity: 0.5;
+  }
+  .updatepost {
+
+    padding-left: 294px;
+    padding-right: 342px;
+    width: 984px;
+  }
+  .btnn {
+    margin-right: 461px;
+    margin-left: 156px;
+    margin-top: 27px;
+  }
+  .btnn2 {
+    margin-left: -576px;
+    margin-top: 27px;
+  }
+  .card {
+    height: 228px;
+    margin-top: 122px;
+    background: #ffffffb3;
+  }
+}
+
+
+
