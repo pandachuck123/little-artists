@@ -16,22 +16,22 @@ import {TeacherReportComponent} from "./teacher-report/teacher-report.component"
 import {TodaySlotComponent} from "./today-slot/today-slot.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent, data: { breadcrumb: 'login'}},
+  { path: '', redirectTo: 'Login', pathMatch: 'full' },
+  { path: 'Login', component: LoginComponent, data: { breadcrumb: 'login'}},
   // {path: '', component: SideNavComponent, canActivate: [AuthGuardService], children: [
   {path: '', component: SideNavComponent, children: [
-      {path: 'home', component: HomeComponent, data: {breadcrumb: 'home'}},
-      {path: 'gallery', component: GalleryComponent, data: {breadcrumb: 'gallery'}},
-      {path: 'generate-certificate', component: GenerateCertificateComponent, data: {breadcrumb: 'generate-certificate'}},
-      {path: 'searches', component: SearchComponent, data: {breadcrumb: 'searches'}},
-      {path: 'message', component: MessageComponent, data: {breadcrumb: 'Message'}},
-      {path: 'multi-student-report', component: MultiStudentReportComponent, data: {breadcrumb: 'multi-student-report'}},
-      {path: 'password-creation', component: PasswordCreationComponent, data: {breadcrumb: 'password-creation'}},
-      {path: 'query-tracker', component: QueryTrackerComponent, data: {breadcrumb: 'query-tracker'}},
-      {path: 'student-master', component: StudentMasterComponent, data: {breadcrumb: 'student-master'}},
-      {path: 'teacher-report', component: TeacherReportComponent, data: {breadcrumb: 'teacher-report'}},
-      {path: 'today-slot', component: TodaySlotComponent, data: {breadcrumb: 'today-slot'}},
-      {path: 'upload-student', component: UploadStudentComponent, data: {breadcrumb: 'upload-student'}},
+      {path: 'Home', component: HomeComponent, data: {breadcrumb: 'home'}},
+      {path: 'Gallery', component: GalleryComponent, data: {breadcrumb: 'gallery'}},
+      {path: 'Generate-Certificate', component: GenerateCertificateComponent, data: {breadcrumb: 'generate-certificate'}},
+      {path: 'Searches', component: SearchComponent, data: {breadcrumb: 'searches'}},
+      {path: 'Message', component: MessageComponent, data: {breadcrumb: 'Message'}},
+      {path: 'Multi-Student-Report', component: MultiStudentReportComponent, data: {breadcrumb: 'multi-student-report'}},
+      {path: 'Password-Creation', component: PasswordCreationComponent, data: {breadcrumb: 'password-creation'}},
+      {path: 'Query-Tracker', component: QueryTrackerComponent, data: {breadcrumb: 'query-tracker'}},
+      {path: 'Student-Master', component: StudentMasterComponent, data: {breadcrumb: 'student-master'}},
+      {path: 'Teacher-Report', component: TeacherReportComponent, data: {breadcrumb: 'teacher-report'}},
+      {path: 'Today-Slot', component: TodaySlotComponent, data: {breadcrumb: 'today-slot'}},
+      {path: 'Upload-Student', component: UploadStudentComponent, data: {breadcrumb: 'upload-student'}},
     ]
   }
   ];

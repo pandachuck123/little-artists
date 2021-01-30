@@ -69,7 +69,7 @@ export class LoginComponent implements OnInit {
     if (type=='Admin'){
       if (value.emailId == 'abc@gmail.com' && value.password == '1234567'){
         this.toastr.success('Admin Login Successful!.');
-        this.router.navigate(['/home']);
+        this.router.navigate(['/Home']);
       }else{
         this.toastr.error('Invalid EmailId or Password');
 
@@ -77,7 +77,7 @@ export class LoginComponent implements OnInit {
     }else if (type=='Teacher'){
       if (value.emailId == 'abc@gmail.com' && value.password == '1234567'){
         this.toastr.success('Teacher Login Successful!.');
-        this.router.navigate(['/home']);
+        this.router.navigate(['/Home']);
       }else{
         this.toastr.error('Invalid EmailId or Password');
 
