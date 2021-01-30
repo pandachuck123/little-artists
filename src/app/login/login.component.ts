@@ -66,18 +66,22 @@ export class LoginComponent implements OnInit {
   // }
   submit(value,type){
     console.log(value,'value..')
-    if (type=='Admin'){
+    if (type == 'Admin'){
       if (value.emailId == 'abc@gmail.com' && value.password == '1234567'){
-        this.toastr.success('Admin Login Successful!.');
         this.router.navigate(['/Home']);
+        // this.toastr.success('Our Tutor Will Contact You Within 24hrs')
+        this.toastr.success('Admin Login Successful!.');
+
       }else{
+        // this.toastr.error('Please Fill The Form');
         this.toastr.error('Invalid EmailId or Password');
 
       }
     }else if (type=='Teacher'){
       if (value.emailId == 'abc@gmail.com' && value.password == '1234567'){
-        this.toastr.success('Teacher Login Successful!.');
         this.router.navigate(['/Home']);
+        this.toastr.success('Teacher Login Successful!.');
+
       }else{
         this.toastr.error('Invalid EmailId or Password');
 
