@@ -770,6 +770,10 @@ button.bg-dark:focus {
   position: static;
   float: none; }
 
+.dropdown-menu{
+  min-width: 15rem !important;
+}
+
 .navbar-text {
   display: inline-block;
   padding-top: 0.5rem;
