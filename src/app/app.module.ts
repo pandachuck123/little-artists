@@ -47,7 +47,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { SideNavComponent } from './side-nav/side-nav.component';
+import { PopUp, SideNavComponent} from './side-nav/side-nav.component';
 import { MultiStudentReportComponent } from './multi-student-report/multi-student-report.component';
 import { TeacherReportComponent } from './teacher-report/teacher-report.component';
 import { StudentMasterComponent } from './student-master/student-master.component';
@@ -71,6 +71,7 @@ import {Ng2SearchPipeModule} from "ng2-search-filter";
     HomeComponent,
     LoginComponent,
     SideNavComponent,
+    PopUp,
     MultiStudentReportComponent,
     TeacherReportComponent,
     StudentMasterComponent,
@@ -136,6 +137,9 @@ import {Ng2SearchPipeModule} from "ng2-search-filter";
     HttpClientModule,
     Ng2SearchPipeModule,
 
+  ],
+  entryComponents: [
+    PopUp
   ],
   providers: [
     ToastrService

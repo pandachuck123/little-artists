@@ -10,7 +10,8 @@ import {ToastrService} from "ngx-toastr";
 export class MessageComponent implements OnInit {
   public messages: FormGroup;
 
-  constructor(public fb: FormBuilder, public toastr: ToastrService,) {
+  constructor(public fb: FormBuilder, public toastr: ToastrService) {
+
     this.messages = this.fb.group({
       text : ['', Validators.required],
     });
@@ -22,7 +23,7 @@ export class MessageComponent implements OnInit {
   submit(value){
     // if (value.valid){
       console.log(value,'value')
-    this.toastr.success('Message Submitted Successful!.');
+      this.toastr.success('Message Submitted Successful!.');
     // }
   }
 }
