@@ -15,6 +15,7 @@ import {StudentMasterComponent} from "./student-master/student-master.component"
 import {TeacherReportComponent} from "./teacher-report/teacher-report.component";
 import {TodaySlotComponent} from "./today-slot/today-slot.component";
 import {AddUserComponent} from "./add-user/add-user.component";
+import {ProjectSetupComponent} from "./project-setup/project-setup.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'Login', pathMatch: 'full' },
@@ -33,6 +34,7 @@ const routes: Routes = [
       {path: 'Teacher-Report', component: TeacherReportComponent, data: {breadcrumb: 'teacher-report'}},
       {path: 'Today-Slot', component: TodaySlotComponent, data: {breadcrumb: 'today-slot'}},
       {path: 'Upload-Student', component: UploadStudentComponent, data: {breadcrumb: 'upload-student'}},
+      {path: 'Project-Setup', component: ProjectSetupComponent, data: {breadcrumb: 'project-setup'}},
     ]
   }
   ];

@@ -1,1 +1,27 @@
-<p>message works!</p>
+<section>
+  <div>
+        <form  [formGroup]="messages">
+          <div class="row ">
+            <div class="col-md-12 box-card pt-3">
+              <h1 class="color-blue text-center">Send A Message</h1>
+              <div class="row p-5">
+
+                <div class="col-md-12">
+                  <mat-form-field class="w-100">
+                  <mat-label>Leave A Message</mat-label>
+                  <textarea matInput formControlName="text"  autocomplete="off" required></textarea>
+                  <mat-error *ngIf="messages.controls.text.errors?.required">Message is required</mat-error>
+                  </mat-form-field>
+                </div>
+
+                <div class="proposal-buttom col-md-4 mt-5 mb-5 text-center w-100">
+                  <button mat-raised-button color="primary"  (click)="submit(messages.value)" >Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    <!--</div>-->
+  <!--</div>-->
+</section>
