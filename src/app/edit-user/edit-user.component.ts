@@ -41,7 +41,7 @@ export class EditUserComponent implements OnInit {
     console.log(this.form.value);
     this.postService.update(this.id, this.form.value).subscribe(res => {
       console.log('Post updated successfully!');
-      this.router.navigateByUrl('student-master');
+      this.router.navigateByUrl('Searches');
     });
   }
 
