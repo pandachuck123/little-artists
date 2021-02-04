@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {ToastrService} from "ngx-toastr";
 import {Observable} from "rxjs";
 import {map, startWith} from "rxjs/operators";
+import { WINDOW } from '@ng-toolkit/universal';
+
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -19,7 +21,7 @@ export interface User {
 @Component({
   selector: 'app-teacher-report',
   templateUrl: './teacher-report.component.html',
-  // styleUrls: ['./teacher-report.component.scss']
+  styleUrls: ['./teacher-report.component.scss']
 })
 export class TeacherReportComponent implements OnInit {
   name = new FormControl();
@@ -47,7 +49,7 @@ export class TeacherReportComponent implements OnInit {
 
   filteredOptions: Observable<User[]>;
 
-  constructor( public fb: FormBuilder, public toast: ToastrService ) {
+  constructor(@Inject(WINDOW) private window: Window, public fb: FormBuilder, public toast: ToastrService ) {
     this.PeriodicElement = [];
 
     this.PeriodicElement = [
@@ -72,6 +74,8 @@ export class TeacherReportComponent implements OnInit {
         map(value => typeof value === 'string' ? value : value.name),
         map(name => name ? this._filter(name) : this.options.slice())
       );
+
+
   }
 
   displayFn(user: User): string {
