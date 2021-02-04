@@ -18,6 +18,7 @@ import {AddUserComponent} from "./add-user/add-user.component";
 import {ProjectSetupComponent} from "./project-setup/project-setup.component";
 import {CameraComponent} from "./camera/camera.component";
 import {ParentCameraComponent} from "./parent-camera/parent-camera.component";
+import {EditUserComponent} from "./edit-user/edit-user.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'Login', pathMatch: 'full' },
@@ -37,6 +38,7 @@ const routes: Routes = [
       {path: 'Today-Slot', component: TodaySlotComponent, data: {breadcrumb: 'today-slot'}},
       {path: 'Upload-Student', component: UploadStudentComponent, data: {breadcrumb: 'upload-student'}},
       {path: 'Project-Setup', component: ProjectSetupComponent, data: {breadcrumb: 'project-setup'}},
+      {path: 'edit-user/:postId/edit', component: EditUserComponent, data: {breadcrumb: 'edit-user'}},
       {path: 'Camera', component: CameraComponent, data: {breadcrumb: 'camera'}},
       {path: 'Camera1', component: ParentCameraComponent, data: {breadcrumb: 'camera'}},
     ]
