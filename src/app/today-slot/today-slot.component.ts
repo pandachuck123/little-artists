@@ -52,15 +52,15 @@ export class TodaySlotComponent implements OnInit {
       {position: 133, name: 'Jonathan Ho Jia Jie', teacher: 'Muralindran', class: 'BA', day: 'Monday', timeslot: '05:00 PM to 07:00 PM'},
       {position: 180, name: 'Mansha Sapra', teacher: 'Muralindran', class: 'BA', day: 'Monday', timeslot: '02:45 PM to 04:45 PM'},
       {position: 498, name: 'Apoorva Nair', teacher: 'Muralindran', class: 'JP', day: 'Monday', timeslot: '05:00 PM to 07:00 PM'},
-      {position: 555, name: 'Charlotte Teh', teacher: 'Muralindran', class: 'BA', day: 'Monday', timeslot: '05:00 PM to 07:00 PM'},
+      {position: 555, name: 'Charlotte Teh', teacher: 'Muralindran', class: 'BA', day: 'Tuesday', timeslot: '05:00 PM to 07:00 PM'},
       {position: 789, name: 'Lee Ching', teacher: 'Muralindran', class: 'BA', day: 'Monday', timeslot: '02:45 PM to 04:45 PM'},
-      {position: 6847, name: 'Diya Mandal', teacher: 'Muralindran', class: 'BA', day: 'Monday', timeslot: '05:00 PM to 07:00 PM'},
+      {position: 6847, name: 'Diya Mandal', teacher: 'Muralindran', class: 'BA', day: 'Wednesday', timeslot: '05:00 PM to 07:00 PM'},
       {position: 7250, name: 'Laranya Bera', teacher: 'Muralindran', class: 'BA', day: 'Monday', timeslot: '05:00 PM to 07:00 PM'},
-      {position: 7615, name: 'Benjamin Dubs', teacher: 'Muralindran', class: 'BA', day: 'Monday', timeslot: '02:45 PM to 04:45 PM'},
+      {position: 7615, name: 'Benjamin Dubs', teacher: 'Muralindran', class: 'BA', day: 'Friday', timeslot: '02:45 PM to 04:45 PM'},
       {position: 7660, name: 'Jason Ling', teacher: 'Muralindran', class: 'BA', day: 'Monday', timeslot: '02:45 PM to 04:45 PM'},
-      {position: 7727, name: 'Shruti Mahindrakar', teacher: 'Muralindran', class: 'BA', day: 'Monday', timeslot: '05:00 PM to 07:00 PM'},
+      {position: 7727, name: 'Shruti Mahindrakar', teacher: 'Muralindran', class: 'BA', day: 'Tuesday', timeslot: '05:00 PM to 07:00 PM'},
       {position: 133, name: 'Jonathan Ho Jia Jie', teacher: 'Muralindran', class: 'BA', day: 'Monday', timeslot: '05:00 PM to 07:00 PM'},
-      {position: 133, name: 'Jonathan Ho Jia Jie', teacher: 'Muralindran', class: 'BA', day: 'Monday', timeslot: '05:00 PM to 07:00 PM'},
+      {position: 133, name: 'Jonathan Ho Jia Jie', teacher: 'Muralindran', class: 'BA', day: 'Thursday', timeslot: '05:00 PM to 07:00 PM'},
       {position: 133, name: 'Jonathan Ho Jia Jie', teacher: 'Muralindran', class: 'BA', day: 'Monday', timeslot: '05:00 PM to 07:00 PM'}
 
 
