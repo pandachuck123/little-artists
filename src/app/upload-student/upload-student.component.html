@@ -4,38 +4,38 @@
       <div class="row ">
         <div class="col-md-12 box-card pt-3">
           <h1 class="color-blue text-center">STUDENT DETAILS</h1>
-          <div class="row pl-5 pr-5 mt-5">
+          <div class="row " style="padding-left: 89px;padding-right: 40px">
 
-            <div class="col-md-4">
+            <div class="col-md-4 mt-3">
               <mat-form-field class="w-100">
                 <input matInput placeholder="Student Name" formControlName="firstname" (keypress)="nameValidate($event)" autocomplete="off" required >
                 <mat-error *ngIf="form.controls.firstname.errors?.required">Student Name is required</mat-error>
               </mat-form-field>
             </div>
 
-            <div class="col-md-4">
-              <mat-form-field class="w-100">
-                <input matInput placeholder="Register No" formControlName="regNo"  maxlength="20" autocomplete="off" required >
-                <mat-error *ngIf="form.controls.regNo.errors?.required">Register No is required</mat-error>
-              </mat-form-field>
-            </div>
-            <div class="col-md-4">
-              <mat-form-field class="w-100">
-                <input matInput placeholder="Phone No" formControlName="mobile" minlength="10"  maxlength="10" (keypress)="numberValidate($event)" autocomplete="off" required>
-                <mat-error *ngIf="form.controls.mobile.errors?.required">Phone No is required</mat-error>
-                <mat-error *ngIf="form.controls.mobile.hasError('pattern')">Enter Valid  Phone No</mat-error>
-              </mat-form-field>
-            </div>
-            <div class="col-md-4 mt-4">
-              <mat-form-field class="w-100">
-                <input matInput placeholder="Email ID"   formControlName="emailId"  autocomplete="off" >
-                <!--<mat-error *ngIf="form.controls.emailId.errors?.required">Email ID is required</mat-error>-->
-                <mat-error *ngIf="form.controls.emailId.hasError('pattern')">Please Enter Correct Format</mat-error>
-              </mat-form-field>
-            </div>
+            <!--<div class="col-md-4">-->
+              <!--<mat-form-field class="w-100">-->
+                <!--<input matInput placeholder="Register No" formControlName="regNo"  maxlength="20" autocomplete="off" required >-->
+                <!--<mat-error *ngIf="form.controls.regNo.errors?.required">Register No is required</mat-error>-->
+              <!--</mat-form-field>-->
+            <!--</div>-->
+            <!--<div class="col-md-4">-->
+              <!--<mat-form-field class="w-100">-->
+                <!--<input matInput placeholder="Phone No" formControlName="mobile" minlength="10"  maxlength="10" (keypress)="numberValidate($event)" autocomplete="off" required>-->
+                <!--<mat-error *ngIf="form.controls.mobile.errors?.required">Phone No is required</mat-error>-->
+                <!--<mat-error *ngIf="form.controls.mobile.hasError('pattern')">Enter Valid  Phone No</mat-error>-->
+              <!--</mat-form-field>-->
+            <!--</div>-->
+            <!--<div class="col-md-4 mt-4">-->
+              <!--<mat-form-field class="w-100">-->
+                <!--<input matInput placeholder="Email ID"   formControlName="emailId"  autocomplete="off" >-->
+                <!--&lt;!&ndash;<mat-error *ngIf="form.controls.emailId.errors?.required">Email ID is required</mat-error>&ndash;&gt;-->
+                <!--<mat-error *ngIf="form.controls.emailId.hasError('pattern')">Please Enter Correct Format</mat-error>-->
+              <!--</mat-form-field>-->
+            <!--</div>-->
 
 
-            <div class="form-group col-md-6 mt-4">
+            <div class="form-group col-md-6">
               <div class="col-md-6">
                 <span for="file">File</span>
                 <div class="custom-file  ">
@@ -53,7 +53,7 @@
               </div>
             </div>
 
-            <div class="proposal-buttom col-md-2 mt-5 mb-5 text-center w-100">
+            <div class="proposal-buttom col-md-2 mt-3  text-center w-100">
               <button mat-raised-button color="primary"  (click)="submit(form.value)" >Add</button>
               <!--<button mat-raised-button color="primary" *ngIf="updateValue == true" (click)="submit(form.value)" >Update</button>-->
             </div>
@@ -66,7 +66,7 @@
     </form>
     <div class="w-100">
       <div class="row pl-0 pr-0 mt-5" fxLayoutAlign="center center">
-        <div class="col-md-12 pl-2 pr-2">
+        <div class="col-md-10 pl-2 pr-2">
           <div class="box-card">
             <h1 class="color-blue text-center">Student List</h1>
             <div class="row">
@@ -76,9 +76,9 @@
                   <tr>
                     <th scope="col">S.No</th>
                     <th scope="col">Name</th>
-                    <th scope="col">RegNo</th>
-                    <th scope="col">PhNo</th>
-                    <th scope="col">Email</th>
+                    <!--<th scope="col">RegNo</th>-->
+                    <!--<th scope="col">PhNo</th>-->
+                    <!--<th scope="col">Email</th>-->
                     <th scope="col">File</th>
                     <!--<th scope="col">Action</th>-->
                     <!--<th scope="col">File</th>-->
@@ -88,9 +88,9 @@
                   <tr *ngFor="let table of image;let i = index">
                     <th scope="row">{{i+1}}</th>
                     <td>{{table.firstname}}</td>
-                    <td>{{table.regNo}}</td>
-                    <td>{{table.mobile}}</td>
-                    <td>{{table.emailId}}</td>
+                    <!--<td>{{table.regNo}}</td>-->
+                    <!--<td>{{table.mobile}}</td>-->
+                    <!--<td>{{table.emailId}}</td>-->
                     <td ><img style="height:100px; width:100px; border-radius: 45px;" [src]="table.fileSource" /></td>
                     <!--<td > <i class="material-icons"  (click)="edit(i)" style="cursor: pointer" >-->
                       <!--edit-->
