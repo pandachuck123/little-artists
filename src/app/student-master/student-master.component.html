@@ -1,1 +1,82 @@
-<p>student-master works!</p>
+<section>
+  <div class="flex-p">
+    <form [formGroup]="searchStudent" >
+      <div class="row w-100">
+        <div class="col-md-12">
+          <div class="text-right h-100">
+            <mat-form-field class="w-25">
+              <input matInput placeholder="Search..." formControlName="searchName" (input)="updateFilter(searchStudent.value)" >
+              <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="row w-100 ">
+    <div class="col-md-12">
+      <div fxLayout="column" style="margin-left: 3%">
+        <div class="flex-p">
+          <ngx-datatable
+            #table
+            class="material"
+            [headerHeight]="50"
+            [limit]="10"
+            [columnMode]="'force'"
+            [footerHeight]="50"
+            [rowHeight]="'auto'"
+            [rows]="rows"
+            [count]="total"
+            [selected]="selected"
+            [selectionType]="'checkbox'">
+            <ngx-datatable-column name="ID">
+              <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
+                {{row.id}}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="PHOTO">
+              <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
+                <img style="height:100px; width:100px; border-radius: 45px;" src="assets/images/img1.jpg" />
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="NAME">
+              <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
+                {{row.name}}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="TEACHER">
+              <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
+                {{row.teacher}}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="CLASS">
+              <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
+                {{row.class}}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="DAY">
+              <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
+                {{row.day}}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="TIME SLOT">
+              <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
+                {{row.timeslot}}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="ACTION">
+              <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
+                <a href="">View</a>
+              </ng-template>
+            </ngx-datatable-column>
+
+          </ngx-datatable>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</section>
