@@ -1,0 +1,42 @@
+<!--<div class="row">-->
+  <!--<button (click)="start()" class="btn btn-primary">Play</button>-->
+  <!--<button (click)="toggleControls()" class="btn btn-success">Toggle Controls</button>-->
+  <!--<button (click)="pause()" class="btn btn-warning">Pause</button>-->
+  <!--<button (click)="resume()" class="btn btn-info">Resume</button>-->
+  <!--<button (click)="sound()" class="btn btn-danger">Play with Sound</button>-->
+<!--</div>-->
+
+<!--<div class="row">-->
+  <!--<div class="col-md-12">-->
+    <!--<div class="text-center">-->
+      <!--<h3>-->
+        <!--<video #videoElement></video>-->
+      <!--</h3>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+<div *ngIf="isCameraExist; else noCameraExist">
+  <div style="text-align:center">
+    <div class="btn-group">
+      <button class="button" (click)="takeSnapshot()">Take Picture</button>
+      <button class="button" (click)="changeWebCame(true)">Toggle Camera</button>
+      <button class="button" (click)="onOffWebCame()">Switch camera</button>
+    </div> <br />
+    <webcam [height]="500" [width]="1000" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"
+            *ngIf="showWebcam" [switchCamera]="nextWebcamObservable"></webcam>
+  </div>
+
+  <div *ngIf="errors.length > 0">
+    <h4>Error Messages:</h4>
+    <ul *ngFor="let error of errors">
+      <li>{{ error | json }}</li>
+    </ul>
+  </div>
+</div>
+
+<ng-template #noCameraExist>
+  Camera device not available
+</ng-template>
+
+

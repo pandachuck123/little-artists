@@ -65,6 +65,9 @@ import {NgxPaginationModule} from "ngx-pagination";
 import {HttpClientModule} from "@angular/common/http";
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import {WebcamModule} from 'ngx-webcam';
+import { CameraComponent } from './camera/camera.component';
+import { ParentCameraComponent } from './parent-camera/parent-camera.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +89,8 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     ProjectSetupComponent,
     AddUserComponent,
     EditUserComponent,
+    CameraComponent,
+    ParentCameraComponent,
 
 
     // SearchStudentComponent,
@@ -101,6 +106,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     NgtUniversalModule,
     ToastrModule.forRoot(),
     NgxPaginationModule,
+    WebcamModule,
     MatSliderModule,
     MatProgressSpinnerModule,
     MatAutocompleteModule,
