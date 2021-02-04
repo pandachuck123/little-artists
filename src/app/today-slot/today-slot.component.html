@@ -1,25 +1,49 @@
-<h1 class="text-center">Today Slot</h1>
 <section>
-  <div class="flex-p">
-    <form [formGroup]="search" >
-    <div class="row w-100">
-      <div class="col-md-12">
-        <div class="text-right h-100">
-          <mat-form-field class="w-25">
-            <input matInput placeholder="Search..." formControlName="searchName" (input)="updateFilter(search.value)" >
-            <mat-icon matSuffix>search</mat-icon>
-          </mat-form-field>
-        </div>
+  <h1 >Today Slot</h1>
+
+  <div class="row w-100" style="margin-left: 5%;">
+    <div class="col-md-6">
+
+      <div class="w-100">
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+          <mat-button-toggle value="bold">MONDAY</mat-button-toggle>
+          <mat-button-toggle value="bold">TUESDAY</mat-button-toggle>
+          <mat-button-toggle value="bold">WEDNESDAY</mat-button-toggle>
+          <mat-button-toggle value="bold">THURSDAY</mat-button-toggle>
+          <mat-button-toggle value="bold">FRIDAY</mat-button-toggle>
+          <mat-button-toggle value="bold">SATURDAY</mat-button-toggle>
+          <mat-button-toggle value="bold">SUNDAY</mat-button-toggle>
+        </mat-button-toggle-group>
       </div>
     </div>
-    </form>
+      <!--<div class="row w-100">-->
+        <div class="col-md-6">
+          <div class="col-md-6" style="margin-left: 33%;">
+          <form [formGroup]="search" >
+            <!--<div class="text-right h-100">-->
+            <mat-form-field class="w-100">
+              <input matInput placeholder="Search..." formControlName="searchName" (input)="updateFilter(search.value)" >
+              <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+          <!--</div>-->
+          </form>
+          </div>
+
+
+        </div>
+      <!--</div>-->
   </div>
+
+
+  <!--<div class="flex-p">-->
+   <!---->
+  <!--</div>-->
 
   <div class="row w-100 ">
     <div class="col-md-12">
-      <div fxLayout="column">
+      <div fxLayout="column" style="margin-left: 3%">
         <div class="flex-p">
-          <ngx-datatable  class="table table-hover"
+          <ngx-datatable
             #table
             class="material"
             [headerHeight]="50"
@@ -31,35 +55,40 @@
             [count]="total"
             [selected]="selected"
             [selectionType]="'checkbox'">
-            <ngx-datatable-column name="position">
+            <ngx-datatable-column name="POSITION">
               <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
                 {{row.position}}
               </ng-template>
             </ngx-datatable-column>
-            <ngx-datatable-column name="name">
+            <ngx-datatable-column name="NAME">
               <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
                 {{row.name}}
               </ng-template>
             </ngx-datatable-column>
-            <ngx-datatable-column name="teacher">
+            <ngx-datatable-column name="TEACHER">
               <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
                 {{row.teacher}}
               </ng-template>
             </ngx-datatable-column>
-            <ngx-datatable-column name="class">
+            <ngx-datatable-column name="CLASS">
               <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
                 {{row.class}}
               </ng-template>
             </ngx-datatable-column>
-            <ngx-datatable-column name="day">
+            <ngx-datatable-column name="DAY">
               <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
                 {{row.day}}
               </ng-template>
             </ngx-datatable-column>
-            <ngx-datatable-column name="timeslot">
+            <ngx-datatable-column name="TIME SLOT">
               <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
                 {{row.timeslot}}
               </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="ACTION">
+              <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
+                <a href="">View</a>
+             </ng-template>
             </ngx-datatable-column>
             <!--<ngx-datatable-column name="Action">-->
               <!--<ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">-->
