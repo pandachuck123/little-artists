@@ -1,24 +1,24 @@
 <section>
-  <h1 >Today Slot</h1>
+  <h1 class="text-center">Today Slot</h1>
 
-  <div class="row w-100" style="margin-left: 5%;">
-    <div class="col-md-6">
+  <div class="row-12 " style="margin-left: 5%">
+    <div class="col-md-12">
+    <div class="col-md-12 text-center">
 
-      <div class="w-100">
+      <div >
         <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-          <mat-button-toggle value="bold">MONDAY</mat-button-toggle>
-          <mat-button-toggle value="bold">TUESDAY</mat-button-toggle>
-          <mat-button-toggle value="bold">WEDNESDAY</mat-button-toggle>
-          <mat-button-toggle value="bold">THURSDAY</mat-button-toggle>
-          <mat-button-toggle value="bold">FRIDAY</mat-button-toggle>
-          <mat-button-toggle value="bold">SATURDAY</mat-button-toggle>
-          <mat-button-toggle value="bold">SUNDAY</mat-button-toggle>
+          <mat-button-toggle value="bold" (click)="filterDay('Monday')">MONDAY</mat-button-toggle>
+          <mat-button-toggle value="bold" (click)="filterDay('Tuesday')">TUESDAY</mat-button-toggle>
+          <mat-button-toggle value="bold" (click)="filterDay('Wednesday')">WEDNESDAY</mat-button-toggle>
+          <mat-button-toggle value="bold" (click)="filterDay('Thursday')">THURSDAY</mat-button-toggle>
+          <mat-button-toggle value="bold" (click)="filterDay('Friday')">FRIDAY</mat-button-toggle>
+          <mat-button-toggle value="bold" (click)="filterDay('Saturday')">SATURDAY</mat-button-toggle>
+          <mat-button-toggle value="bold" (click)="filterDay('Sunday')">SUNDAY</mat-button-toggle>
         </mat-button-toggle-group>
       </div>
     </div>
-      <!--<div class="row w-100">-->
-        <div class="col-md-6">
-          <div class="col-md-6" style="margin-left: 33%;">
+      <!--<div class="row-md-6 ">-->
+          <div class="col-md-3 mt-3" >
           <form [formGroup]="search" >
             <!--<div class="text-right h-100">-->
             <mat-form-field class="w-100">
@@ -28,10 +28,8 @@
           <!--</div>-->
           </form>
           </div>
-
-
-        </div>
       <!--</div>-->
+    </div>
   </div>
 
 

@@ -13,3 +13,22 @@
   margin-bottom: 1rem;
   color: #212529;
 }
+@media only screen
+and (min-width: 1024px) and (max-width: 1366px){
+.flex-p {
+  padding: 0px !important;
+}
+}
+
+@media only screen
+and (min-width: 768px) and (max-width: 1023px){
+  .flex-p {
+    padding: 0px !important;
+  }
+}
+@media only screen
+and (min-width: 360px) and (max-width: 767px){
+  .flex-p {
+    padding: 0px !important;
+  }
+}

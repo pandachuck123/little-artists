@@ -90,6 +90,17 @@ export class TodaySlotComponent implements OnInit {
     this.table.offset = 0;
   }
 
+  filterDay(day){
+    let days = day;
+    console.log(days,'days....')
+    const val = days.toLowerCase();
+    const temp = this.temp.filter(function (d) {
+      return d.day.toLowerCase().indexOf(val) !== -1 || !val;
+    });
+    this.rows = temp;
+    this.table.offset = 0;
+  }
+
 
 
 }
