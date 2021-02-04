@@ -64,6 +64,7 @@ import {EditUserComponent} from "./edit-user/edit-user.component";
 import {NgxPaginationModule} from "ngx-pagination";
 import {HttpClientModule} from "@angular/common/http";
 import {Ng2SearchPipeModule} from "ng2-search-filter";
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
   declarations: [
@@ -136,7 +137,7 @@ import {Ng2SearchPipeModule} from "ng2-search-filter";
     MatTreeModule,
     HttpClientModule,
     Ng2SearchPipeModule,
-
+    NgxDatatableModule,
   ],
   entryComponents: [
     PopUp
