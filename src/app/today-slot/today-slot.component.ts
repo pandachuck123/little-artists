@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {DatatableComponent} from '@swimlane/ngx-datatable';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ToastrService} from "ngx-toastr";
+import {Router} from "@angular/router";
 
 export interface PeriodicElement {
   name: string;
@@ -38,7 +39,7 @@ export class TodaySlotComponent implements OnInit {
   columns = [{ prop: 'name' }, { name: 'Company' }, { name: 'Gender' }];
   @ViewChild(DatatableComponent) table: DatatableComponent;
 
-  constructor(public fb: FormBuilder, public toast: ToastrService) {
+  constructor(public fb: FormBuilder, public toast: ToastrService, public router: Router) {
 
     this.search = this.fb.group({
       searchName : [''],
@@ -99,6 +100,11 @@ export class TodaySlotComponent implements OnInit {
     });
     this.rows = temp;
     this.table.offset = 0;
+  }
+
+  view(){
+    // this.router.navigate(['/Camera'  + '/' + true]);
+    this.router.navigate(['/Edit-Today-Slot']);
   }
 
 

@@ -1,6 +1,9 @@
 import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {WebcamImage, WebcamInitError, WebcamUtil} from "ngx-webcam";
 import {Observable, Subject} from "rxjs";
+import {FileService} from "../shared/file.service";
+import * as fileSaver from 'file-saver';
+import {FormArray, FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-camera',
@@ -8,98 +11,75 @@ import {Observable, Subject} from "rxjs";
   styleUrls: ['./camera.component.scss']
 })
 export class CameraComponent implements OnInit {
-  // @ViewChild('videoElement') videoElement: any;
-  // public video: any;
-  // public browser: any;
-  // public displayControls: any;
-  //
-  // constructor() { }
-  //
-  // ngOnInit(): void {
-  //   this.video = this.videoElement.nativeElement;
-  // }
-  //
-  // start() {
-  //   this.initCamera({ video: true, audio: false });
-  // }
-  // sound() {
-  //   this.initCamera({ video: true, audio: true });
-  // }
-  //
-  // initCamera(config: any) {
-  //   this.browser =  navigator;
-  //
-  //   this.browser.getUserMedia = (this.browser.getUserMedia ||
-  //     this.browser.webkitGetUserMedia ||
-  //     this.browser.mozGetUserMedia ||
-  //     this.browser.msGetUserMedia);
-  //
-  //   this.browser.mediaDevices.getUserMedia(config).then(stream => {
-  //     this.video.src = window.URL.createObjectURL(stream);
-  //     this.video.play();
-  //   });
-  // }
-  //
-  // pause() {
-  //   this.video.pause();
-  // }
-  //
-  // toggleControls() {
-  //   this.video.controls = this.displayControls;
-  //   this.displayControls = !this.displayControls;
-  // }
-  //
-  // resume() {
-  //   this.video.play();
-  // }
-  @Output() getPicture = new EventEmitter<WebcamImage>();
-  showWebcam = true;
-  isCameraExist = true;
-
-  errors: WebcamInitError[] = [];
-
-  // webcam snapshot trigger
+  public studentArray: FormGroup;
+  public items: any;
+  public webcamImage: WebcamImage = null;
+  public showWebcam: any ;
+  public PeriodicElement: any ;
   private trigger: Subject<void> = new Subject<void>();
-  private nextWebcam: Subject<boolean | string> = new Subject<boolean | string>();
-
-  constructor() { }
-
-
-  ngOnInit(): void {
-    WebcamUtil.getAvailableVideoInputs()
-      .then((mediaDevices: MediaDeviceInfo[]) => {
-        this.isCameraExist = mediaDevices && mediaDevices.length > 0;
-      });
-  }
-
-  takeSnapshot(): void {
+  triggerSnapshot(): void {
     this.trigger.next();
   }
 
-  onOffWebCame() {
-    this.showWebcam = !this.showWebcam;
-  }
 
-  handleInitError(error: WebcamInitError) {
-    this.errors.push(error);
-  }
-
-  changeWebCame(directionOrDeviceId: boolean | string) {
-    this.nextWebcam.next(directionOrDeviceId);
-  }
-
-  handleImage(webcamImage: WebcamImage) {
-    this.getPicture.emit(webcamImage);
-    this.showWebcam = false;
-  }
-
-  get triggerObservable(): Observable<void> {
+  public get triggerObservable(): Observable<void> {
     return this.trigger.asObservable();
   }
+  constructor(private fileService: FileService, public fb: FormBuilder) {
+    this.showWebcam = true;
+    this.PeriodicElement = [];
+    this.studentArray = this.fb.group({
+      items: this.fb.array([])
+    });
+    this.items = this.studentArray.get('items') as FormArray;
+    console.log(this.items, 'this.items....')
+    this.items.push(this.initItemRows());
 
-  get nextWebcamObservable(): Observable<boolean | string> {
-    return this.nextWebcam.asObservable();
   }
+
+
+  ngOnInit(): void {
+
+  }
+  initItemRows() {
+    return this.fb.group({
+      id: [''],
+      student: [''],
+      teacher: [''],
+      class: [''],
+      day: [''],
+      time: [''],
+      
+    });
+  }
+
+  handleImage(webcamImage: WebcamImage): void {
+    console.log('Saved webcam image', webcamImage);
+    this.webcamImage = webcamImage;
+    this.showWebcam = false;
+    // this.download(webcamImage);
+    this.download();
+  }
+
+
+  download() {
+    this.fileService.downloadFile().subscribe(response => {
+      let blob:any = new Blob([response], { type: 'text/json; charset=utf-8' });
+      const url = window.URL.createObjectURL(blob);
+      //window.open(url);
+      //window.location.href = response.url;
+      fileSaver.saveAs(blob, 'employees.json');
+    }), error => console.log('Error downloading the file'),
+      () => console.info('File downloaded successfully');
+  }
+
+  studentEdit(i, value){
+
+    console.log(i,'i...');
+    console.log(value,'value');
+    console.log('Successfully');
+  }
+
 
 
 

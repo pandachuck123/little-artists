@@ -53,7 +53,7 @@
             [count]="total"
             [selected]="selected"
             [selectionType]="'checkbox'">
-            <ngx-datatable-column name="POSITION">
+            <ngx-datatable-column name="ID">
               <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
                 {{row.position}}
               </ng-template>
@@ -85,8 +85,10 @@
             </ngx-datatable-column>
             <ngx-datatable-column name="ACTION">
               <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
-                <a href="">View</a>
-             </ng-template>
+                <!--<a href="">View</a>-->
+                <button mat-raised-button color="primary"  (click)="view()" >View</button>
+
+              </ng-template>
             </ngx-datatable-column>
             <!--<ngx-datatable-column name="Action">-->
               <!--<ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">-->

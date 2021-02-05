@@ -3,8 +3,8 @@
     <form [formGroup]="form" >
       <div class="row ">
         <div class="col-md-12 box-card pt-3">
-          <h1 class="color-blue text-center" style="font-family: 'New Rocker', cursive;font-size: 250%;font-weight: 500;">STUDENT DETAILS</h1>
-          <div class="row " style="padding-left: 21px;padding-right: 0px">
+          <h1 class="color-blue text-center" style="font-family: 'New Rocker', cursive;font-size: 250%;font-weight: 500;">UPLOAD STUDENT</h1>
+          <div class="row mt-5" style="padding-left: 10%;padding-right: 0px">
 
             <div class="col-md-4 mt-3">
               <mat-form-field class="w-100">
@@ -35,14 +35,14 @@
             <!--</div>-->
 
 
-            <div class="form-group col-md-6">
-              <div class="col-md-6">
+            <div class="form-group col-md-4">
+              <!--<div class="col-md-6">-->
                 <span for="file">File</span>
                 <div class="custom-file  ">
                   <input type="file" id="file" class="custom-file-input" accept=".png, .jpg, .jpeg, .pdf"  (change)="onFileChange($event)"   aria-describedby="inputGroupFileAddon01" >
                   <label class="custom-file-label"> Choose</label>
                 </div>
-              </div>
+              <!--</div>-->
 
               <!--<input formControlName="file" id="file" type="file" class="form-control" (change)="onFileChange($event)">-->
               <div class="col-md-4">
@@ -68,7 +68,7 @@
       <div class="row pl-0 pr-0 mt-5" fxLayoutAlign="center center">
         <div class="col-md-10 pl-2 pr-2">
           <div class="box-card">
-            <h1 class="color-blue text-center">Student List</h1>
+            <h1 class="color-blue text-center">Student Detail</h1>
             <div class="row">
               <div class="col-md-12 mt-3 pl-0 " >
                 <table class="table table-hover">

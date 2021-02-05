@@ -14,11 +14,23 @@
   color: #212529;
 }
 .imgData{
-  height:100px;
-  width:100px;
+  height:50px;
+  width:50px;
   border-radius: 45px;
-  margin-left: -24px
+  margin-left: -18px
 }
+.datatable-body .datatable-body-row .datatable-body-cell {
+  text-align: left;
+  padding: 0.9rem 1.2rem;
+  vertical-align: top;
+  border-top: 0;
+  color: rgba(0, 0, 0, 0.87);
+  transition: width 0.3s ease;
+  font-size: 14px!important;
+  font-weight: 400;
+}
+
+
 @media only screen
 and (min-width: 1024px) and (max-width: 1366px){
 .flex-p {
@@ -33,8 +45,18 @@ and (min-width: 768px) and (max-width: 1023px){
   }
 }
 @media only screen
-and (min-width: 360px) and (max-width: 767px){
+and (min-width: 320px) and (max-width: 737px){
   .flex-p {
     padding: 0px !important;
+  }
+  .datatable-body .datatable-body-row .datatable-body-cell {
+    text-align: left;
+    padding: 0.9rem 1.2rem;
+    vertical-align: top;
+    border-top: 0;
+    color: rgba(0, 0, 0, 0.87);
+    transition: width 0.3s ease;
+    font-size: 6px!important;
+    font-weight: 400;
   }
 }

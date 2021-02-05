@@ -16,7 +16,7 @@
   </div>
 
   <div class="row w-100 ">
-    <div class="col-md-12">
+    <div class="col-md-12 pl-0 pr-0">
       <div fxLayout="column" style="margin-left: 3%">
         <div class="flex-p">
           <ngx-datatable
@@ -42,12 +42,12 @@
               </ng-template>
             </ngx-datatable-column>
             <ngx-datatable-column name="NAME">
-              <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
+              <ng-template ngx-datatable-cell-template  let-rowIndex="rowIndex" let-row="row" let-value="value">
                 {{row.name}}
               </ng-template>
             </ngx-datatable-column>
             <ngx-datatable-column name="TEACHER">
-              <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
+              <ng-template ngx-datatable-cell-template  let-rowIndex="rowIndex" let-row="row" let-value="value">
                 {{row.teacher}}
               </ng-template>
             </ngx-datatable-column>
@@ -68,7 +68,9 @@
             </ngx-datatable-column>
             <ngx-datatable-column name="ACTION">
               <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
-                <a class="nav-link" routerLink="/Camera">View</a>
+                <button mat-raised-button color="primary"  (click)="view()" >View</button>
+
+                <!--<a class="nav-link"  (click)="view()">View</a>-->
               </ng-template>
             </ngx-datatable-column>
 

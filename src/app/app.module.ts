@@ -68,6 +68,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import {WebcamModule} from 'ngx-webcam';
 import { CameraComponent } from './camera/camera.component';
 import { ParentCameraComponent } from './parent-camera/parent-camera.component';
+import {FileService} from "./shared/file.service";
 
 
 @NgModule({
@@ -154,7 +155,7 @@ import { ParentCameraComponent } from './parent-camera/parent-camera.component';
   providers: [
     ToastrService,
     MatDatepickerModule,
-
+    FileService
   ],
   bootstrap: [AppComponent]
 })

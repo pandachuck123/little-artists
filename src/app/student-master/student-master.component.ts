@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {DatatableComponent} from "@swimlane/ngx-datatable";
 import {ToastrService} from "ngx-toastr";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-student-master',
@@ -25,7 +26,7 @@ export class StudentMasterComponent implements OnInit {
   columns = [{ prop: 'name' }, { name: 'Company' }, { name: 'Gender' }];
   @ViewChild(DatatableComponent) table: DatatableComponent;
 
-  constructor(public fb: FormBuilder, public toast: ToastrService) {
+  constructor(public fb: FormBuilder, public toast: ToastrService, public router: Router) {
 
     this.searchStudent = this.fb.group({
       searchName : [''],
@@ -75,6 +76,13 @@ export class StudentMasterComponent implements OnInit {
     });
     this.rows = temp;
     this.table.offset = 0;
+  }
+
+  view(){
+    // console.log(event,'event...')
+    // console.log(i,'i...')
+    // this.router.navigate(['/Camera'  + '/' + true]);
+    this.router.navigate(['/Edit-Student-Master']);
   }
 
 
