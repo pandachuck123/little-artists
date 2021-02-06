@@ -4,13 +4,28 @@
     <div class="col-md-12 text-center">
 
       <div >
-        <webcam [height]="250"
-                [width]="250"
-                [trigger]="triggerObservable"
-                (imageCapture)="handleImage($event)">
-        </webcam>
-        <!--<button class="actionBtn" (click)="triggerSnapshot()">Click Here and take the Shot</button>-->
-        <i class="fas fa-camera" (click)="triggerSnapshot()">Camera</i>
+        <div id="app">
+          <div><video #video id="video" width="300" height="300" autoplay></video></div>
+          <div><button id="snap" (click)="capture()">Snap Photo</button></div>
+          <canvas #canvas id="canvas" width="300" height="300"></canvas>
+          <ul>
+            <li *ngFor="let c of captures">
+              <img src="{{ c }}" height="50" />
+            </li>
+          </ul>
+        </div>
+
+        <!--<input type="file" accept="image/*" capture="user">-->
+        <!--<input type="file" accept="image/*" capture="environment">-->
+
+        <!--<webcam [height]="250"-->
+                <!--[width]="250"-->
+                <!--[trigger]="triggerObservable"-->
+                <!--(imageCapture)="handleImage($event)">-->
+        <!--</webcam>-->
+        <!--&lt;!&ndash;<button class="actionBtn" (click)="triggerSnapshot()">Click Here and take the Shot</button>&ndash;&gt;-->
+        <!--<i class="fas fa-camera" (click)="triggerSnapshot()">Camera</i>-->
+        <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" (change)="onFileSelected($event)">
       </div>
     </div>
     <!--<div class="row-md-6 ">-->
@@ -54,7 +69,8 @@
                 <div class="col-md-4 pl-4" >
                   <div class="snapshot" *ngIf="webcamImage">
                     <h2>Photo</h2>
-                    <img [src]="webcamImage.imageAsDataUrl" class="imgData" />
+                    <div id="target">You can drag an image file here</div>
+                    <!--<img [src]="webcamImage.imageAsDataUrl" class="imgData" />-->
                   </div>
                 </div>
 
