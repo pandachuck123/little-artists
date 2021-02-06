@@ -4,28 +4,10 @@
     <div class="col-md-12 text-center">
 
       <div >
-        <div id="app">
-          <div><video #video id="video" width="300" height="300" autoplay></video></div>
-          <div><button id="snap" (click)="capture()">Snap Photo</button></div>
-          <canvas #canvas id="canvas" width="300" height="300"></canvas>
-          <ul>
-            <li *ngFor="let c of captures">
-              <img src="{{ c }}" height="50" />
-            </li>
-          </ul>
-        </div>
 
-        <!--<input type="file" accept="image/*" capture="user">-->
-        <!--<input type="file" accept="image/*" capture="environment">-->
 
-        <!--<webcam [height]="250"-->
-                <!--[width]="250"-->
-                <!--[trigger]="triggerObservable"-->
-                <!--(imageCapture)="handleImage($event)">-->
-        <!--</webcam>-->
-        <!--&lt;!&ndash;<button class="actionBtn" (click)="triggerSnapshot()">Click Here and take the Shot</button>&ndash;&gt;-->
-        <!--<i class="fas fa-camera" (click)="triggerSnapshot()">Camera</i>-->
-        <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" (change)="onFileSelected($event)">
+        <i class="fas fa-camera" ><input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" (change)="onFileSelected($event)"></i>
+
       </div>
     </div>
     <!--<div class="row-md-6 ">-->

@@ -15,6 +15,7 @@ export class ParentCameraComponent implements OnInit {
   public items: any;
   public webcamImage: WebcamImage = null;
   public showWebcam: any ;
+  public selectedFile: any ;
   public PeriodicElement: any ;
   private trigger: Subject<void> = new Subject<void>();
   triggerSnapshot(): void {
@@ -51,6 +52,12 @@ export class ParentCameraComponent implements OnInit {
       time: [''],
 
     });
+  }
+
+  onFileSelected(event) {
+    console.log(event,'event...');
+    this.selectedFile = event.target.files[0];
+    console.log(this.selectedFile,'selectedFile...');
   }
 
   handleImage(webcamImage: WebcamImage): void {

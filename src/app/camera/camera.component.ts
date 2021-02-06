@@ -13,29 +13,17 @@ import {FormArray, FormBuilder, FormGroup} from "@angular/forms";
 export class CameraComponent implements OnInit {
   public studentArray: FormGroup;
   public items: any;
-  // public webcamImage: WebcamImage = null;
-  // public showWebcam: any ;
+
   public selectedFile: any ;
-  // public PeriodicElement: any ;
-  // private trigger: Subject<void> = new Subject<void>();
-  // triggerSnapshot(): void {
-  //   this.trigger.next();
-  // }
-
-
-  // public get triggerObservable(): Observable<void> {
-  //   return this.trigger.asObservable();
-  // }
-  @ViewChild("video")
-  public video: ElementRef;
-
-  @ViewChild("canvas")
-  public canvas: ElementRef;
-
-  public captures: Array<any>;
+  // @ViewChild("video")
+  // public video: ElementRef;
+  //
+  // @ViewChild("canvas")
+  // public canvas: ElementRef;
+  //
+  // public captures: Array<any>;
 
   constructor(private fileService: FileService, public fb: FormBuilder) {
-    // this.showWebcam = true;
     this.selectedFile = null;
     this.studentArray = this.fb.group({
       items: this.fb.array([])
@@ -44,7 +32,7 @@ export class CameraComponent implements OnInit {
     console.log(this.items, 'this.items....')
     this.items.push(this.initItemRows());
 
-    this.captures = [];
+    // this.captures = [];
 
   }
 
@@ -52,34 +40,34 @@ export class CameraComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  public ngAfterViewInit() {
-    // const player = document.getElementById('player');
-    // const canvas = document.getElementById('canvas');
-    // const context = this.canvas.nativeElement.getContext('2d');
-    // const captureButton = document.getElementById('capture');
-    //
-    // const constraints = {
-    //   video: true,
-    //   audio: false
-    // };
-    //
-    // captureButton.addEventListener('click', () => {
-    //   // Draw the video frame to the canvas.
-    //   context.drawImage(player, 0, 0, 640, 480);
-    // });
-    //
-    // navigator.mediaDevices.getUserMedia(constraints)
-    //   .then((stream) => {
-    //     this.video.nativeElement.src = stream;
-    //   });
-    // if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
-        this.video.nativeElement.src = stream;
-        this.video.nativeElement.play();
-      });
-    // }
-
-  }
+  // public ngAfterViewInit() {
+  //   // const player = document.getElementById('player');
+  //   // const canvas = document.getElementById('canvas');
+  //   // const context = this.canvas.nativeElement.getContext('2d');
+  //   // const captureButton = document.getElementById('capture');
+  //   //
+  //   // const constraints = {
+  //   //   video: true,
+  //   //   audio: false
+  //   // };
+  //   //
+  //   // captureButton.addEventListener('click', () => {
+  //   //   // Draw the video frame to the canvas.
+  //   //   context.drawImage(player, 0, 0, 640, 480);
+  //   // });
+  //   //
+  //   // navigator.mediaDevices.getUserMedia(constraints)
+  //   //   .then((stream) => {
+  //   //     this.video.nativeElement.src = stream;
+  //   //   });
+  //   // if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  //     navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
+  //       this.video.nativeElement.src = stream;
+  //       this.video.nativeElement.play();
+  //     });
+  //   // }
+  //
+  // }
   initItemRows() {
     return this.fb.group({
       id: [''],
@@ -91,47 +79,21 @@ export class CameraComponent implements OnInit {
       
     });
   }
-  capture() {
-    let context = this.canvas.nativeElement.getContext("2d").drawImage(this.video.nativeElement, 0, 0, 300, 300);
-    this.captures.push(this.canvas.nativeElement.toDataURL("image/png"));
-  }
-
-  // handleImage(webcamImage: WebcamImage): void {
-  //   console.log('Saved webcam image', webcamImage);
-  //   this.webcamImage = webcamImage;
-  //   this.showWebcam = false;
-  //   // this.download(webcamImage);
-  //   this.download();
+  // capture() {
+  //   let context = this.canvas.nativeElement.getContext("2d").drawImage(this.video.nativeElement, 0, 0, 300, 300);
+  //   this.captures.push(this.canvas.nativeElement.toDataURL("image/png"));
   // }
 
-
-  // download() {
-  //   this.fileService.downloadFile().subscribe(response => {
-  //     let blob:any = new Blob([response], { type: 'text/json; charset=utf-8' });
-  //     const url = window.URL.createObjectURL(blob);
-  //     //window.open(url);
-  //     //window.location.href = response.url;
-  //     fileSaver.saveAs(blob, 'employees.json');
-  //   }), error => console.log('Error downloading the file'),
-  //     () => console.info('File downloaded successfully');
-  // }
-  //
-  // studentEdit(i, value){
-  //
-  //   console.log(i,'i...');
-  //   console.log(value,'value');
-  //   console.log('Successfully');
-  // }
-
-  onFileSelected(event)
-  {
+  onFileSelected(event) {
+    console.log(event,'event...');
     this.selectedFile = event.target.files[0];
+    console.log(this.selectedFile,'selectedFile...');
   }
 
-  // onUpload()
-  // {
-  //   console.log(this.selectedFile); // You can use FormData upload to backend server
-  // }
+  onUpload()
+  {
+    console.log(this.selectedFile); // You can use FormData upload to backend server
+  }
 
 
 
