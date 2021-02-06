@@ -29,7 +29,7 @@ export class TeacherReportComponent implements OnInit {
   public form: FormGroup;
   public name1: any;
   public PeriodicElement: any;
-  displayedColumns: string[] = ['id', 'Student', 'teacher', 'timeslot', 'day', 'caption', 'comment'];
+  displayedColumns: string[] = ['id', 'Student', 'teacher', 'timeslot', 'day', 'comment'];
 
   options: User[] = [
     {name: 'Jonathan Ho Jia Jie'},
@@ -43,12 +43,12 @@ export class TeacherReportComponent implements OnInit {
     this.PeriodicElement = [];
 
     this.PeriodicElement = [
-      {id: 133, Student: 'Jonathan Ho Jia Jie', teacher: 'Muralindran', timeslot: '05:00 PM to 07:00 PM', day: 'Monday', caption: '', comment: 'Hello'},
-      {id: 134, Student: 'Mansha Sapra', teacher: 'Muralindran', timeslot: '05:00 PM to 07:00 PM', day: 'Monday', caption: '', comment: 'Hello'},
-      {id: 135, Student: 'Charlotte Teh', teacher: 'Muralindran', timeslot: '05:00 PM to 07:00 PM', day: 'Monday', caption: '', comment: 'Hello'},
-      {id: 136, Student: 'Lee Ching', teacher: 'Muralindran', timeslot: '05:00 PM to 07:00 PM', day: 'Monday', caption: '', comment: 'Hello'},
-      {id: 137, Student: 'Diya Mandal', teacher: 'Muralindran', timeslot: '05:00 PM to 07:00 PM', day: 'Monday', caption: '', comment: 'Hello'},
-      {id: 138, Student: 'Laranya Bera', teacher: 'Muralindran', timeslot: '05:00 PM to 07:00 PM', day: 'Monday', caption: '', comment: 'Hello'},
+      {id: 133, Student: 'Jonathan Ho Jia Jie', teacher: 'Muralindran', timeslot: '05:00 PM to 07:00 PM', day: 'Monday', comment: 'Hello'},
+      {id: 134, Student: 'Mansha Sapra', teacher: 'Muralindran', timeslot: '05:00 PM to 07:00 PM', day: 'Monday', comment: 'Hello'},
+      {id: 135, Student: 'Charlotte Teh', teacher: 'Muralindran', timeslot: '05:00 PM to 07:00 PM', day: 'Monday',  comment: 'Hello'},
+      {id: 136, Student: 'Lee Ching', teacher: 'Muralindran', timeslot: '05:00 PM to 07:00 PM', day: 'Monday',  comment: 'Hello'},
+      {id: 137, Student: 'Diya Mandal', teacher: 'Muralindran', timeslot: '05:00 PM to 07:00 PM', day: 'Monday', comment: 'Hello'},
+      {id: 138, Student: 'Laranya Bera', teacher: 'Muralindran', timeslot: '05:00 PM to 07:00 PM', day: 'Monday',  comment: 'Hello'},
 
     ];
     this.form = this.fb.group({

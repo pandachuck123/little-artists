@@ -1,12 +1,12 @@
 <section>
   <form [formGroup]="form" >
-    <h2   style="font-family: 'New Rocker', cursive;font-size: 250%;font-weight: 500;" class="text-center" >Multi Student Report</h2>
+    <h2   style="font-family: 'New Rocker', cursive;font-size: 250%;font-weight: 500;padding-top: 34px;" class="text-center" >Multi Student Report</h2>
 
     <div class="row w-100" style="margin-top: 120px;">
 
       <div class="col-md-1"></div>
       <div class="col-md-3">
-        <mat-form-field>
+        <mat-form-field class="field">
           <mat-label>Student Name</mat-label>
           <input type="text" matInput [formControl]="name" [matAutocomplete]="auto">
           <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
@@ -19,7 +19,7 @@
       </div>
 
       <div class="col-md-3">
-  <mat-form-field>
+  <mat-form-field class="field">
     <mat-label>Start Date</mat-label>
     <input matInput [matDatepicker]="picker1" [formControl]="date">
     <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
@@ -28,13 +28,13 @@
       </div>
       <div class="col-md-3">
 
-      <mat-form-field >
+      <mat-form-field class="field">
     <mat-label>End Date</mat-label>
     <input matInput [matDatepicker]="picker2" [formControl]="date2">
     <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
     <mat-datepicker #picker2></mat-datepicker>
       </mat-form-field></div>
-      <div class="col-md-2">
+      <div class="col-md-2" class="field">
         <button mat-raised-button color="primary" (click)="submit(form.value)">Submit</button>
       </div>
     </div>

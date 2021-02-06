@@ -69,6 +69,7 @@ import {WebcamModule} from 'ngx-webcam';
 import { CameraComponent } from './camera/camera.component';
 import { ParentCameraComponent } from './parent-camera/parent-camera.component';
 import {FileService} from "./shared/file.service";
+import { SearchStudentComponent } from './search-student/search-student.component';
 
 
 @NgModule({
@@ -93,6 +94,7 @@ import {FileService} from "./shared/file.service";
     EditUserComponent,
     CameraComponent,
     ParentCameraComponent,
+    SearchStudentComponent,
 
 
     // SearchStudentComponent,

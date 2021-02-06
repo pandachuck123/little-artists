@@ -95,9 +95,9 @@
 
     <!--</p>-->
     <!--<h2 style="text-align: center;"  style="font-family: 'New Rocker', cursive;font-size: 250%;font-weight: 500;" class="sp-title animate__animated animate__backInDown animate__delay-0s mt-1" >Teacher Report</h2>-->
-    <h2  style="font-family: 'New Rocker', cursive;font-size: 250%;font-weight: 500;" class="text-center" >Teacher Report</h2>
+    <h2  style="font-family: 'New Rocker', cursive;font-size: 250%;font-weight: 500;padding-top: 20px;" class="text-center" >Teacher Report</h2>
 
-    <div class="row w-100" style="margin-top: 120px;">
+    <div class="row w-100">
       <div class="col-md-3"></div>
       <div class="col-md-3">
 
@@ -112,7 +112,7 @@
 <!--          </mat-autocomplete>-->
 <!--        </mat-form-field>-->
 
-        <mat-form-field style="width:300px">
+        <mat-form-field >
           <mat-label>Teacher Student</mat-label>
           <input type="text" matInput [formControl]="name" [matAutocomplete]="auto">
           <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
@@ -134,7 +134,7 @@
          <a download="my-custom-file.pdf" href="assets/pdf/Aaliya Singh.pdf" style="margin-left: 13px;background-color: #3378BD" ><button mat-raised-button color="primary">PDF</button></a>
       </div>
       <div class="col-md-1">
-        <a download="my-custom-file.pdf" href="assets/pdf/Aaliya Singh.pdf" style="margin-left: 13px;background-color: #3378BD" ><button mat-raised-button color="primary">EXCEL</button></a>
+        <a download="my-custom-file.pdf" href="assets/pdf/Aaliya Singh.pdf" style="width: 15px;margin-left: 13px;background-color: #3378BD" ><button mat-raised-button color="primary">EXCEL</button></a>
       </div>
       <div class="col-md-1">
         <a download="my-custom-file.pdf" href="assets/pdf/Aaliya Singh.pdf" style="margin-left: 13px;background-color: #3378BD" ><button mat-raised-button color="primary">Doc</button></a>
@@ -178,10 +178,10 @@
           <th mat-header-cell *matHeaderCellDef> comment </th>
           <td mat-cell *matCellDef="let element"> {{element.comment}} </td>
         </ng-container>
-<ng-container matColumnDef="caption">
-          <th mat-header-cell *matHeaderCellDef> Caption </th>
-          <td mat-cell *matCellDef="let element"> {{element.caption}} </td>
-        </ng-container>
+<!--<ng-container matColumnDef="caption">-->
+<!--          <th mat-header-cell *matHeaderCellDef> Caption </th>-->
+<!--          <td mat-cell *matCellDef="let element"> {{element.caption}} </td>-->
+<!--        </ng-container>-->
 
 
 

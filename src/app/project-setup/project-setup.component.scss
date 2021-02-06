@@ -1,3 +1,22 @@
 //.div{
 //  background-image: url('./assets/images/img4.jpg');
 //}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media only screen
+and (min-width: 320px) and (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    /* padding-left: 15px; */
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
