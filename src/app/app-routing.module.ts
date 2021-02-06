@@ -39,7 +39,7 @@ const routes: Routes = [
       {path: 'Today-Slot', component: TodaySlotComponent, data: {breadcrumb: 'today-slot'}},
       {path: 'Upload-Student', component: UploadStudentComponent, data: {breadcrumb: 'upload-student'}},
       {path: 'Project-Setup', component: ProjectSetupComponent, data: {breadcrumb: 'project-setup'}},
-      {path: 'Search-Student', component: SearchStudentComponent, data: {breadcrumb: 'Search-Student'}},
+      {path: 'Search', component: SearchStudentComponent, data: {breadcrumb: 'Search-Student'}},
       {path: 'edit-user/:postId/edit', component: EditUserComponent, data: {breadcrumb: 'edit-user'}},
       {path: 'Edit-Student-Master', component: CameraComponent, data: {breadcrumb: 'camera'}},
       {path: 'Edit-Today-Slot', component: ParentCameraComponent, data: {breadcrumb: 'camera'}},
