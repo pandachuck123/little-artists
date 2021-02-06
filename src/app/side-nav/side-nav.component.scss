@@ -474,7 +474,7 @@
   font-size: large;
 }
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-  color: green !important;
+  color: gold !important;
   font-family: 'Shrikhand', cursive;
   font-size: large;
 }
@@ -520,7 +520,8 @@ button.bg-dark:hover,
 button.bg-dark:focus {
   background-color: #1d2124 !important; }
 .ftco-navbar-light {
-  background: transparent !important;
+  //background: transparent !important;
+  background-image: linear-gradient(90deg, #4904f1, #86f3ee) !important;
   position: absolute;
   top: -8px;
   left: 0;
@@ -528,7 +529,8 @@ button.bg-dark:focus {
   z-index: 3; }
 @media (max-width: 991.98px) {
   .ftco-navbar-light {
-    background: whitesmoke !important;
+    //background: whitesmoke !important;
+    background-image: linear-gradient(90deg, #4904f1, #86f3ee) !important;
     //color: white !important;
     position: relative;
     top: 0;
@@ -563,7 +565,7 @@ button.bg-dark:focus {
   padding-left: 20px;
   padding-right: 20px;
   //color: #fff;
-  color: black !important;
+  //color: black !important;
   font-weight: 500;
   opacity: 1 !important; }
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover, .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:focus {
@@ -578,7 +580,8 @@ button.bg-dark:focus {
     color: #fff; } }
 .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
   border: none;
-  background: #212529;;
+  //background: #212529;;
+  background-image: linear-gradient(90deg, #04baf1, #f1f386) !important;
   -webkit-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
   -moz-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
   box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41); }
